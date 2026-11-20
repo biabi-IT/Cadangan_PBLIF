@@ -1,0 +1,140 @@
+:root {
+    --brand-yellow: #FFC107;
+    --brand-yellow-hover: #e5ad06;
+    --bg-navbar: #F8F9FA;
+    --bg-body: #FFFFFF;
+    --border-color: #E2E8F0;
+    --text-dark: #1E293B;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+}
+
+.bg-light-custom {
+    background-color: var(--bg-navbar) !important;
+}
+
+.badge-brand {
+    background-color: var(--brand-yellow);
+    color: #000000;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.shadow-xs {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Tambahan Styling untuk Halaman Login & Daftar */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand-yellow);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--brand-yellow);
+    border-color: var(--brand-yellow);
+}
+
+/* Sidebar Styling */
+.sidebar-menu {
+    border: 1px solid var(--border-color);
+    background-color: #FFFFFF;
+}
+
+.sidebar-menu .list-group-item {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #334155;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.sidebar-menu .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.sidebar-menu .list-group-item:hover:not(.active) {
+    background-color: #FFFBEB;
+    color: #000000;
+}
+
+.sidebar-menu .list-group-item.active {
+    background-color: var(--brand-yellow);
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Dashboard Stat Cards */
+.stat-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.btn-warning {
+    background-color: var(--brand-yellow);
+    border-color: var(--brand-yellow);
+    color: #000000;
+}
+
+.btn-warning:hover {
+    background-color: var(--brand-yellow-hover);
+    border-color: var(--brand-yellow-hover);
+    color: #000000;
+}
+
+.table> :not(caption)>*>* {
+    padding: 0.85rem 0.75rem;
+    border-bottom-color: var(--border-color);
+}
+
+@media (max-width: 991.98px) {
+    .offcanvas-lg {
+        max-width: 260px;
+    }
+
+    .sidebar-menu {
+        border: none;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+@media print {
+
+    nav,
+    .sidebar-menu,
+    .btn {
+        display: none !important;
+    }
+
+    .col-lg-9 {
+        width: 100% !important;
+    }
+}
